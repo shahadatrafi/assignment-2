@@ -46,6 +46,7 @@
 .nav-bar {
     padding: 50px 0;
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
 }
@@ -85,15 +86,21 @@
 .banner-description,
 .team-description,
 .features-discription,
-.experience-description , .sponsors-description, .newsletter-description{
+.experience-description,
+.sponsors-description,
+.newsletter-description {
     font-size: 16px;
     color: var(--light-grey);
     line-height: 1.5em;
     margin: 25px 0 30px;
 }
 
-.banner-img img {
+.banner-img {
     text-align: center;
+}
+
+.banner-img img {
+    max-width: 1450px;
     width: 100%;
     padding-bottom: 50px;
 }
@@ -103,15 +110,17 @@
 .team {
     display: flex;
     align-items: center;
-    column-gap: 70px;
+    gap: 70px;
     flex-wrap: wrap;
     margin: 0 40px 130px;
 
 }
-.team-img img{
+
+.team-img img {
     width: 100%;
 
 }
+
 .team-img {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -186,7 +195,8 @@
     color: var(--light-grey);
 
 }
-.features-img img{
+
+.features-img img {
     width: 100%;
 }
 
@@ -216,7 +226,9 @@
 
 /* experience styles
 ==================== */
-.experience-title, .sponsors-title, .newsletter-title {
+.experience-title,
+.sponsors-title,
+.newsletter-title {
     font-weight: 700;
     font-size: 45px;
     color: var(--black);
@@ -231,7 +243,7 @@
 }
 
 .experience-box {
-    padding: 45px 45px;
+    padding: 40px 40px;
     text-align: center;
     border: 1px solid var(--orange);
     border-radius: 8px;
@@ -261,24 +273,30 @@
     font-size: 20px;
     color: var(--light-grey);
 }
+
 /* sponsors styles
 ================== */
-.sponsors, .newsletter{
+.sponsors,
+.newsletter {
     margin-bottom: 130px;
 }
-.sponsor-info, .newsletter{
+
+.sponsor-info,
+.newsletter {
     text-align: center;
 }
-.sponsors-img{
+
+.sponsors-img {
     margin-top: 50px;
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
     filter: grayscale(100%);
 }
+
 /* newsletter styles
 ==================== */
-.input-field{
+.input-field {
     font-weight: 500;
     font-size: 20px;
     box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.1);
@@ -286,16 +304,126 @@
     padding: 18px 25px;
     border-radius: 8px;
     margin-right: 24px;
-    
+
 }
-.copyright{
+
+/* footer styles
+================ */
+.copyright {
     background-color: #FFF4E7;
     border-radius: 8px;
     text-align: center;
 }
-.copyright p{
+
+.copyright p {
     padding: 40px 0;
     font-size: 20px;
     color: var(--grey);
 
+}
+
+/* Responsive Styles
+==================== */
+@media only screen and (max-width:576px) {
+    .nav-bar {
+        padding: 25px 0px;
+        flex-direction: column;
+    }
+
+    .logo {
+        font-size: 28px;
+    }
+
+    .navigation ul {
+        flex-direction: column;
+        padding-left: 0;
+
+    }
+
+    .navigation ul li {
+        margin: 5px 0;
+    }
+
+    .banner-text {
+        margin: 46px 20px 35px;
+    }
+
+    .banner-title,
+    .team-title,
+    .features-title,
+    .experience-title,
+    .sponsors-title,
+    .newsletter-title {
+        font-size: 25px;
+    }
+
+
+    .banner-description,
+    .team-description,
+    .features-discription,
+    .experience-description,
+    .sponsors-description,
+    .newsletter-description, .copyright p {
+        font-size: 12px;
+    }
+
+    .primary-btn,
+    .input-field {
+        font-size: 16px;
+        padding: 10px 20px;
+    }
+
+    .team {
+        justify-content: center;
+    }
+
+    .team-img {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .features,
+    .experience-info {
+        flex-wrap: wrap;
+        padding: 0 25px;
+    }
+
+    .feature h3 {
+        font-size: 20px;
+    }
+
+    .feature p {
+        font-size: 12px;
+    }
+
+    .features-img {
+        text-align: center;
+        padding-left: 0;
+    }
+
+    .big-btn {
+        position: static;
+        padding: 20px 25px;
+        margin-top: 25px;
+        font-size: 14px;
+    }
+
+    .big-btn>span {
+        font-size: 22px;
+    }
+
+    .show-experience,
+    .sponsors-img {
+        gap: 60px;
+        padding: 0 105px;
+        justify-content: center;
+        margin-bottom: 60px;
+    }
+    .sponsors,
+    .newsletter,.features {
+    margin-bottom: 60px;
+    }
+
+    .hide {
+        display: none;
+    }
 }
