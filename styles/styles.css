@@ -84,14 +84,15 @@
 
 .banner-description,
 .team-description,
-.features-discription {
+.features-discription,
+.experience-description , .sponsors-description, .newsletter-description{
     font-size: 16px;
     color: var(--light-grey);
     line-height: 1.5em;
     margin: 25px 0 30px;
 }
 
-.banner-img {
+.banner-img img {
     text-align: center;
     width: 100%;
     padding-bottom: 50px;
@@ -107,7 +108,10 @@
     margin: 0 40px 130px;
 
 }
+.team-img img{
+    width: 100%;
 
+}
 .team-img {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -141,6 +145,7 @@
     display: flex;
     justify-content: space-between;
     gap: 55px;
+    margin-bottom: 130px;
 }
 
 .features-list {
@@ -181,6 +186,9 @@
     color: var(--light-grey);
 
 }
+.features-img img{
+    width: 100%;
+}
 
 .features-img {
     padding-left: 92px;
@@ -197,11 +205,97 @@
     font-weight: 500;
     position: absolute;
     left: 0px;
-    top: 860px;
+    top: 858px;
 }
 
 .big-btn>span {
     font-weight: 700;
     font-size: 65px;
+
+}
+
+/* experience styles
+==================== */
+.experience-title, .sponsors-title, .newsletter-title {
+    font-weight: 700;
+    font-size: 45px;
+    color: var(--black);
+}
+
+.show-experience {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin-top: 70px;
+    margin-bottom: 180px;
+}
+
+.experience-box {
+    padding: 45px 45px;
+    text-align: center;
+    border: 1px solid var(--orange);
+    border-radius: 8px;
+    transition: transform .4s, border .4s, box-shadow .4s;
+}
+
+.experience-box:hover {
+    transform: rotate(25deg);
+    border: 1px solid var(--grey);
+    box-shadow: 0px 0px 50px rgba(0, 0, 0, 0.2);
+}
+
+.experience-box img {
+    width: 45px;
+
+}
+
+.experience-box h3 {
+    font-weight: 600;
+    font-size: 45px;
+    margin: 10px 0;
+    color: var(--black);
+}
+
+.experience-box h4 {
+    font-weight: 600;
+    font-size: 20px;
+    color: var(--light-grey);
+}
+/* sponsors styles
+================== */
+.sponsors, .newsletter{
+    margin-bottom: 130px;
+}
+.sponsor-info, .newsletter{
+    text-align: center;
+}
+.sponsors-img{
+    margin-top: 50px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    filter: grayscale(100%);
+}
+/* newsletter styles
+==================== */
+.input-field{
+    font-weight: 500;
+    font-size: 20px;
+    box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.1);
+    border: 2px solid var(--orange);
+    padding: 18px 25px;
+    border-radius: 8px;
+    margin-right: 24px;
+    
+}
+.copyright{
+    background-color: #FFF4E7;
+    border-radius: 8px;
+    text-align: center;
+}
+.copyright p{
+    padding: 40px 0;
+    font-size: 20px;
+    color: var(--grey);
 
 }
